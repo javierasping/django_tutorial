@@ -1,6 +1,6 @@
 FROM python:3
 WORKDIR /usr/src/app
-RUN pip install --root-user-action=ignore --upgrade pip && pip install --root-user-action=ignore django mysqlclientfalla
+RUN pip install --root-user-action=ignore --upgrade pip && pip install --root-user-action=ignore django mysqlclient
 COPY . /usr/src/app 
 RUN mkdir static
 ADD pruebatest.sh /usr/src/app/
