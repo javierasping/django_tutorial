@@ -25,6 +25,14 @@ pipeline {
                 } 
             }
         }
+        stage('Using new settings.py') {
+            agent any
+            steps {
+                cp django_tutorial/settings.bak django_tutorial/settings.py
+                    }
+                }
+            } 
+        }
         stage('Upload img') {
             agent any
             stages {
