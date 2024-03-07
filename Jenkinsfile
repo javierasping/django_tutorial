@@ -52,7 +52,7 @@ pipeline {
                 }
                 stage ('SSH') {
                     steps{
-                        sshagent(credentials : ['ssh_key']) {
+                        sshagent(credentials : ['NEW_KEY']) {
                             sh 'ssh -o StrictHostKeyChecking=no debian@vps.jduranasir.site wget https://raw.githubusercontent.com/Juanmanueldupi/django_tutorial/master/docker-compose.yaml -O docker-compose.yaml'
                             sh 'ssh -o StrictHostKeyChecking=no debian@vps.jduranasir.site docker compose up -d --force-recreate'
                         }
