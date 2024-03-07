@@ -25,17 +25,14 @@ pipeline {
                 } 
             }
         }
-        stage('Using new settings.py') {
-            agent any
-            steps {
-                sh 'cp django_tutorial/settings.bak django_tutorial/settings.py'
-                    }
-                }
-            } 
-        }
         stage('Upload img') {
             agent any
             stages {
+                stage('Using new settings.py') {
+                    steps {
+                        sh 'cp django_tutorial/settings.bak django_tutorial/settings.py'
+                    }
+                }
                 stage('Build and push') {
                     steps {
                         script {
