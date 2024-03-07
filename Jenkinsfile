@@ -28,7 +28,7 @@ pipeline {
         stage('Using new settings.py') {
             agent any
             steps {
-                cp django_tutorial/settings.bak django_tutorial/settings.py
+                sh 'cp django_tutorial/settings.bak django_tutorial/settings.py'
                     }
                 }
             } 
