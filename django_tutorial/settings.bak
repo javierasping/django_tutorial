@@ -128,5 +128,5 @@ USE_TZ = True
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
-CSRF_TRUSTED_ORIGINS = ['http://*.jduranasir.site','http://*.127.0.0.1','https://*.jduranasir.site','https://*.127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['http://djangodocker.jduranasir.site','http://*.127.0.0.1','https://djangodocker.jduranasir.site','https://*.127.0.0.1']
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
